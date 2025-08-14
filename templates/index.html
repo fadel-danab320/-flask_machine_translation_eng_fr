@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English to French Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        async function translateText() {
+            const inputText = document.getElementById("inputText").value.trim();
+            const outputText = document.getElementById("outputText");
+
+            if (!inputText) {
+                outputText.value = "Please enter text to translate.";
+                return;
+            }
+
+            outputText.value = "Translating...";
+            try {
+                const response = await fetch("/translate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: inputText })
+                });
+
+                if (!response.ok) {
+                    throw new Error("Translation service unavailable");
+                }
+
+                const data = await response.json();
+                outputText.value = data.translation || "Error in translation";
+            } catch (error) {
+                outputText.value = "Error: " + error.message;
+            }
+        }
+
+        function clearFields() {
+            document.getElementById("inputText").value = "";
+            document.getElementById("outputText").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>English to French Translator</h1>
+    <textarea id="inputText" placeholder="Enter text to translate..." maxlength="500"></textarea>
+    <br>
+    <button onclick="translateText()">Translate</button>
+    <button onclick="clearFields()">Clear</button>
+    <br>
+    <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+</body>
+</html>
