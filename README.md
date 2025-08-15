@@ -19,3 +19,24 @@ This project is a simple **Flask-based web application** that translates text fr
 git clone https://github.com/your-username/flask_machine_translation_eng_fr.git
 cd flask_machine_translation_eng_fr
 
+2️⃣ Create a Virtual Environment & Install Dependencies
+
+python -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+
+pip install -r requirements.txt
+
+3️⃣ Run Locally
+
+python app.py
+Open your browser and go to http://127.0.0.1:5000/
+
+🐳 Run with Docker
+Build the Image
+
+docker build -t eng-fr-translator .
+
+
+Run the Container
+docker run -p 5000:5000 eng-fr-translator
