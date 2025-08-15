@@ -56,5 +56,6 @@ cd flask_machine_translation_eng_fr
 ---
 
 # Preview
-![Preview of the App]([testing.png](https://github.com/fadel-danab320/translation_app/blob/main/tetsing.png))
+
+![Preview of the App](https://github.com/fadel-danab320/translation_app/blob/main/tetsing.png)
 
