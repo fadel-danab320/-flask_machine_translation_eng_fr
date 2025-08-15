@@ -5,24 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English to French Translator</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f7f7f7, #e0f7fa);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
+
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        /* Container for translator */
+        .translator-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 700px;
+        }
+
         textarea {
-            width: 80%;
-            height: 100px;
-            margin: 10px 0;
-            padding: 10px;
+            width: 100%;
+            height: 120px;
+            padding: 15px;
             font-size: 16px;
+            border: 2px solid #00796b;
+            border-radius: 8px;
             resize: none;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
         }
+
+        textarea:focus {
+            border-color: #004d40;
+            outline: none;
+        }
+
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             margin: 5px;
             font-size: 16px;
             cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button#translateBtn {
+            background-color: #00796b;
+            color: white;
+        }
+
+        button#translateBtn:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        button#clearBtn {
+            background-color: #cfd8dc;
+        }
+
+        button#clearBtn:hover {
+            background-color: #b0bec5;
+            transform: scale(1.05);
+        }
+
+        /* Responsive textareas */
+        @media (max-width: 600px) {
+            textarea {
+                height: 100px;
+            }
         }
     </style>
     <script>
@@ -62,11 +123,11 @@
 </head>
 <body>
     <h1>English to French Translator</h1>
-    <textarea id="inputText" placeholder="Enter text to translate..." maxlength="500"></textarea>
-    <br>
-    <button onclick="translateText()">Translate</button>
-    <button onclick="clearFields()">Clear</button>
-    <br>
-    <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+    <div class="translator-container">
+        <textarea id="inputText" placeholder="Enter text to translate..." maxlength="500"></textarea>
+        <button id="translateBtn" onclick="translateText()">Translate</button>
+        <button id="clearBtn" onclick="clearFields()">Clear</button>
+        <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+    </div>
 </body>
 </html>
