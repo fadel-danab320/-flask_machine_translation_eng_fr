@@ -19,10 +19,12 @@ git clone https://github.com/fadel-danab320/translation_app.git
 cd flask_machine_translation_eng_fr
 
 ## 2. Create a Virtual Environment & Install Dependencies
-python -m venv venv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate      # On Windows
-pip install -r requirements.txt
+* python -m venv venv 
+* source venv/bin/activate   # On macOS/Linux
+* venv\Scripts\activate      # On Windows
+
+* pip install -r requirements.txt
+
 
 ## 3. Run Locally
 python app.py
