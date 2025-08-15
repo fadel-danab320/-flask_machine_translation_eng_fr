@@ -6,23 +6,75 @@
     <title>English to French Translator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
         }
+
+        header {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         textarea {
-            width: 80%;
-            height: 100px;
+            width: 90%;
+            height: 120px;
             margin: 10px 0;
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
             resize: none;
+            outline: none;
+            transition: border-color 0.3s ease;
         }
+
+        textarea:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+        }
+
         button {
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 12px 25px;
+            margin: 10px;
             font-size: 16px;
             cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #4facfe;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #00c3ff;
+            transform: translateY(-2px);
+        }
+
+        button.clear {
+            background-color: #ff6b6b;
+        }
+
+        button.clear:hover {
+            background-color: #ff4b4b;
         }
     </style>
     <script>
@@ -61,12 +113,14 @@
     </script>
 </head>
 <body>
-    <h1>English to French Translator</h1>
-    <textarea id="inputText" placeholder="Enter text to translate..." maxlength="500"></textarea>
-    <br>
-    <button onclick="translateText()">Translate</button>
-    <button onclick="clearFields()">Clear</button>
-    <br>
-    <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+    <header>English to French Translator</header>
+    <div class="container">
+        <textarea id="inputText" placeholder="Enter text to translate..." maxlength="500"></textarea>
+        <br>
+        <button onclick="translateText()">Translate</button>
+        <button class="clear" onclick="clearFields()">Clear</button>
+        <br>
+        <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+    </div>
 </body>
 </html>
