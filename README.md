@@ -56,4 +56,5 @@ cd flask_machine_translation_eng_fr
 ---
 
 # Preview
-[Insert screenshot or GIF of the app in action here]
+![Preview of the App](testing.png)
+
