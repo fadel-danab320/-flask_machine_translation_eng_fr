@@ -27,15 +27,16 @@ cd flask_machine_translation_eng_fr
 
 
 ## 3. Run Locally
-python app.py
-Open your browser and go to http://127.0.0.1:5000/
+* python app.py
+
+* Open your browser and go to http://127.0.0.1:5000/
 
 ## 4. Run with Docker
 ### Build the Image
-docker build -t eng-fr-translator .
+* docker build -t eng-fr-translator .
 
 ### Run the Container
-docker run -p 5000:5000 eng-fr-translator
+* docker run -p 5000:5000 eng-fr-translator
 
 ---
 
