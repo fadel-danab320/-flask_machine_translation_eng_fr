@@ -15,7 +15,7 @@ This project is a simple Flask-based web application that translates text from E
 # Setup Instructions
 
 ## 1. Clone the Repository
-git clone https://github.com/your-username/flask_machine_translation_eng_fr.git
+git clone https://github.com/fadel-danab320/translation_app.git
 cd flask_machine_translation_eng_fr
 
 ## 2. Create a Virtual Environment & Install Dependencies
