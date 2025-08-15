@@ -28,7 +28,6 @@ venv\Scripts\activate      # On Windows
 pip install -r requirements.txt
 
 3️⃣ Run Locally
-
 python app.py
 Open your browser and go to http://127.0.0.1:5000/
 
@@ -40,3 +39,21 @@ docker build -t eng-fr-translator .
 
 Run the Container
 docker run -p 5000:5000 eng-fr-translator
+
+📌 How to Use
+
+Open the app in your browser.
+Enter your English sentence into the input field.
+Click Translate.
+The translated French text will appear below.
+
+
+⚠️ Known Issues / Limitations
+
+Model may produce less accurate results for long or complex sentences.
+Internet connection may be required for loading large pre-trained models.
+UI is minimal — can be improved for better user experience.
+
+📸 Preview
+<img width="1906" height="906" alt="image" src="https://github.com/user-attachments/assets/5de2e14f-fead-42c9-a37f-a58e585d5605" />
+
