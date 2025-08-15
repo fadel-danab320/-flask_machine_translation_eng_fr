@@ -55,5 +55,6 @@ Internet connection may be required for loading large pre-trained models.
 UI is minimal — can be improved for better user experience.
 
 📸 Preview
-<img width="1906" height="906" alt="image" src="https://github.com/user-attachments/assets/5de2e14f-fead-42c9-a37f-a58e585d5605" />
+
+<img width="1906" height="906" alt="tetsing" src="https://github.com/user-attachments/assets/4a34f221-6fe7-420b-a091-dd3e3f1ee98f" />
 
